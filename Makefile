@@ -20,10 +20,10 @@ OBJ_FILES= \
         main.o
 
 main: $(OBJ_FILES)
-	g++ $(LD_FLAGS) -o main $(OBJ_FILES) $(LD_LIBS) && chmod +x ./main
+	g++ -std=c++11 $(LD_FLAGS) -o main $(OBJ_FILES) $(LD_LIBS) && chmod +x ./main
 
 $(OBJ_FILES): $(CPP_FILES)
-	g++ $(CPP_FLAGS) -c $(CPP_FILES)
+	g++ -std=c++11 $(CPP_FLAGS) -c $(CPP_FILES)
 
 clean:
 	rm -rf main
